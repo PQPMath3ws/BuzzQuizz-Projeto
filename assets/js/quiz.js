@@ -9,7 +9,11 @@ async function getQuizzById() {
             if (request.ok) {
                 quizz = await request.json();
             } else {
-                window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/" + "quiz.html";
+                if (request.status === 404) {
+                    window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/" + "index.html";
+                } else {
+                    window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/" + "quiz.html";
+                }
             }
         } catch (error) {
             window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/" + "quiz.html";
