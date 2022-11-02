@@ -29,19 +29,30 @@ async function deleteQuizz(quizz) {
         await fetch("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/" + 10000, options);
         await config();
     } catch (error) {
-        alert("Erro ao remover quizz!");
+        window.location.reload();
     }
 }
 
 function listQuizzes(quizzes) {
+    document.getElementById("container").innerHTML = "";
     let parent = document.getElementById("");
     for (let i = 0; i < quizzes.length; i++) {
         //make logical to fill index page
     }
 }
 
+function addLoadingDiv() {
+    let containerDiv = document.getElementById("container");
+    let spinnerContent = `<div id="loading-content">
+        <div class="spinner"></div>
+        <p id="loading-text">Carregando...</p>
+    </div>`;
+    containerDiv.innerHTML = spinnerContent;
+}
+
 async function config() {
     document.getElementById("container").innerHTML = "";
+    addLoadingDiv();
     document.getElementById("buzzquizz-text").removeEventListener("click", deleteQuizzConfirmation, true);
     document.getElementById("buzzquizz-text").addEventListener("click", deleteQuizzConfirmation, true);
 }

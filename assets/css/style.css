@@ -20,3 +20,54 @@ body {
     font-size: 37px;
     font-weight: 700;
 }
+
+#loading-content {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner {
+    position: relative;
+}
+ 
+.spinner::before,
+.spinner::after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+ 
+.spinner::before {
+    width: 20.2px;
+    height: 20.2px;
+    background: #ED3624;
+}
+ 
+.spinner::after {
+    width: 72px;
+    height: 72px;
+    animation: spinner-y7ej37 0.8s infinite linear;
+    border: 14.4px solid #ED3624;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+ 
+@keyframes spinner-y7ej37 {
+    to {
+       transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#loading-text {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #ED3624;
+}
