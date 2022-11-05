@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuzzQuizz - Criar seu Próprio Quizz</title>
     <link rel="icon" href="assets/images/icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -17,132 +13,47 @@
     <header id="buzzquizz-header">
         <p id="buzzquizz-text">BuzzQuizz</p>
     </header>
-    <div class="container">
-        <div class="comeco esconde">
-     
-            <div class="titulo">
-                Comece pelo começo
-            </div>
+    <div id="container">
+        <div id="create-quizz">
+            <p class="titulo">Comece pelo começo</p>
             <div class="items">
-                <input class="input-padrao" type="text" placeholder="Título do seu quizz">
-                <input class="input-padrao" type="text" placeholder="URL da imagem do seu quizz">
-                <input class="input-padrao" type="text" placeholder="Quantidade de perguntas do quizz">
-                <input class="input-padrao" type="text" placeholder="Quantidade de níveis do quizz">                
+                <input id="quizz-title" class="custom-input" type="text" placeholder="Título do seu quizz">
+                <p class="error-message">Digite um título válido para seu quizz</p>
+                <input id="quizz-url" class="custom-input" type="text" placeholder="URL da imagem do seu quizz">
+                <p class="error-message">O valor informado não é uma URL válida</p>
+                <input id="quizz-number-questions" class="custom-input" type="number" placeholder="Quantidade de perguntas do quizz">
+                <p class="error-message">O quizz deve ter no mínimo 3 perguntas</p>
+                <input id="quizz-number-levels" class="custom-input" type="number" placeholder="Quantidade de níveis do quizz">
+                <p class="error-message">O quizz deve ter no mínimo 2 níveis</p>
             </div>
-            <button class="prosseguir">
+            <button class="next-btn" onclick="setInitialValuesForQuizz()">
                 Prosseguir pra criar perguntas
             </button>
         </div>
-        <div class="perguntas-container esconde">
-            <div class="perguntas">
-                <div class="titulo">
-                    Crie suas perguntas
-                </div>
-                <div class="items">
-                    <div class="titulo-pergunta">
-                        Pergunta 1
-                    </div>
-                    <input class="input-padrao" clastype="text" placeholder="Texto da pergunta">
-                    <input class="input-padrao" type="text" placeholder="Cor de fundo da pergunta">
-                    <div class="titulo-pergunta">
-                        Resposta correta
-                    </div>
-                    <input class="input-padrao" type="text" placeholder="Resposta correta">
-                    <input class="input-padrao" type="text" placeholder="URL da imagem">
-                    <div class="titulo-pergunta">
-                        Respostas incorretas
-                    </div>
-                    <input class="input-padrao" type="text" placeholder="Resposta incorreta 1">
-                    <input class="input-padrao margin-b"  type="text" placeholder="URL da imagem 1">
-                    <input class="input-padrao" type="text" placeholder="Resposta incorreta 2">
-                    <input class="input-padrao margin-b" type="text" placeholder="URL da imagem 2">
-                    <input class="input-padrao" type="text" placeholder="Resposta incorreta 3">
-                    <input class="input-padrao" type="text" placeholder="URL da imagem 3">
-    
-                               
-                </div>
-                
+        <div id="create-questions">
+            <p class="titulo">Crie suas perguntas</p>
+            <div class="items">
             </div>
-            <div class="pergunta-nova ">
-                <div class="titulo-pergunta-nova">
-                    Pergunta 2
-                </div>
-                <div class="icone">
-                    <ion-icon name="create-outline"></ion-icon>
-                </div>    
-            </div>
-            <div class="pergunta-nova ">
-                <div class="titulo-pergunta-nova">
-                    Pergunta 3
-                </div>
-                <div class="icone ">
-                    <ion-icon name="create-outline"></ion-icon>
-                </div>    
-            </div>
-            
-            <button class="prosseguir margin-t">
-                Prosseguir pra criar níveis
-            </button>
         </div>
-        <div class="niveis-container esconde">
-            <div class="perguntas">
-                <div class="titulo">
-                    Agora, decida os níveis
-                </div>
-                <div class="items">
-                    <div class="titulo-pergunta">
-                        Nível 1
-                    </div>
-                    <input class="input-padrao" clastype="text" placeholder="Título do nível">
-                    <input class="input-padrao" type="text" placeholder="% de acerto mínima">
-                    <input class="input-padrao" type="text" placeholder="URL da imagem do nível">
-                    <input class="input-padrao" type="text" placeholder="Descrição do nível">
-                    
-    
-                               
-                </div>
-                
+        <div id="create-levels">
+            <p class="titulo">Agora, decida os níveis</p>
+            <div class="items">
             </div>
-            <div class="pergunta-nova ">
-                <div class="titulo-pergunta-nova">
-                    Nível 2
-                </div>
-                <div class="icone">
-                    <ion-icon name="create-outline"></ion-icon>
-                </div>    
-            </div>
-            <div class="pergunta-nova ">
-                <div class="titulo-pergunta-nova">
-                    Nível 3
-                </div>
-                <div class="icone ">
-                    <ion-icon name="create-outline"></ion-icon>
-                </div>    
-            </div>
-            
-            <button class="prosseguir margin-t">
-                Finalizar Quizz
-            </button>
         </div>
-        <div class="container-final">
-            <div class="titulo">
-                Seu quizz está pronto!
+        <div id="quizz-ready">
+            <p class="titulo">Seu quizz está pronto!</p>
+            <div id="quizz">
+                <img src="" alt="">
+                <p></p>
             </div>
-            <div class="imagem">
-                <img src="assets/images/castelo.png" alt="">
-                <p>O quão Potterhead é você?</p>
-            </div>
-            <button class="prosseguir acessar">
+            <button class="next-btn" onclick="goQuizz()">
                 Acessar Quizz
             </button>
-            <p><a href="#">Voltar pra home</a></p>
+            <p id="p-index-link"><a href="/index.html">Voltar pra Início</a></p>
         </div>
-        
     </div>
-
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script type="text/javascript" src="assets/js/create.js" defer></script>
 </body>
 </html>
-
