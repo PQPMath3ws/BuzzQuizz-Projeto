@@ -1,0 +1,29 @@
+@media (max-width: 1100px){
+    main{
+
+        align-items: center;
+        justify-content: center;
+    }
+    #content{
+        width: 90%;
+        
+    }
+    .quizzesUsuario{
+        display: block;
+        overflow-x: initial;
+        max-width: initial;
+        white-space: initial;
+        z-index: 2;
+
+        width: 100%;
+    }
+    .quizzes>div{
+        display: block;
+
+        gap: 20px;
+    }
+    .quiz{
+        margin-bottom: 15px;
+        max-width: 340px;
+    }
+}
