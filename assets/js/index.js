@@ -42,12 +42,11 @@ function listQuizzes(quizzes) {
 }
 
 function addLoadingDiv() {
-    let containerDiv = document.getElementById("container");
     let spinnerContent = `<div id="loading-content">
         <div class="spinner"></div>
         <p id="loading-text">Carregando...</p>
     </div>`;
-    containerDiv.innerHTML = spinnerContent;
+    document.body.innerHTML += spinnerContent;
 }
 
 async function config() {
@@ -58,5 +57,6 @@ async function config() {
 }
 
 window.onload = async function() {
+    if (localStorage.getItem("quizzId")) localStorage.removeItem("quizzId");
     await config();
 };

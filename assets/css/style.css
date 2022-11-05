@@ -25,9 +25,20 @@ body {
     font-weight: 700;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 564px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
 #loading-content {
     position: absolute;
-    top: 47%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -74,17 +85,6 @@ body {
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     color: #ED3624;
-}
-
-#container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    width: 564px;
-    margin-left: 50%;
-    transform: translateX(-50%);
 }
 
 #create-quizz, #create-questions, #create-levels, #quizz-ready {
