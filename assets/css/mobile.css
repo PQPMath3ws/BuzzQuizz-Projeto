@@ -26,4 +26,21 @@
         margin-bottom: 15px;
         max-width: 340px;
     }
+
+    .pergunta img{
+        min-width: 300px;
+        min-height: 90.5px;
+    }
+
+    .resultado{
+        display: block;
+        width: 40%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .texto{
+        margin-top:20px;
+        width: 100%;
+    }
 }
