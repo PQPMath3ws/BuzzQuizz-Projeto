@@ -162,8 +162,10 @@ function validateAndOpenQuestion(element) {
         childrenHasId.forEach(child => {
             if (!child.classList.contains("collapsed")) child.classList.add("collapsed");
         });
+        let indexOfId = Array.prototype.indexOf.call(childrenHasId, allChildren[indexOf + 1]);
         allChildren[indexOf].classList.add("collapsed");
         allChildren[indexOf + 1].classList.remove("collapsed");
+        document.getElementById(childrenHasId[indexOfId].id).scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 }
 
