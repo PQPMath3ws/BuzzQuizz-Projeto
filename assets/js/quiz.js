@@ -84,13 +84,12 @@ function verifyQuestion(element) {
             }
             let parentIndexOf = Array.prototype.indexOf.call(document.getElementById("container-less").children, parentNodeElement.parentNode);
             finishedQuizz[parentIndexOf] = true;
-            /*
-            if (document.getElementById("container-less").children[parentIndexOf + 1]) {
-                const id_next = document.getElementById("container-less").children[parentIndexOf + 1].id;
-                const id = document.getElementById("container-less").children[parentIndexOf].id;
-                document.body.scrollTop = document.getElementById(id_next).offsetTop;
-            }
-            */
+            setTimeout(function() {
+                if (document.getElementById("container-less").children[parentIndexOf + 1]) {
+                    const id = document.getElementById("container-less").children[parentIndexOf + 1].id;
+                    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }, 2000);
             if (!finishedQuizz.includes(false)) {
                 if (finished === false) {
                     finished = true;

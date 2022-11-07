@@ -364,6 +364,7 @@ body {
     color: #000000;
     font-weight: 700;
     font-size: 19px;
+    word-break: break-all;
 }
 
 .alternative h1 {
