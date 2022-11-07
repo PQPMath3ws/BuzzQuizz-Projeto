@@ -16,7 +16,7 @@ async function getQuizzes() {
 async function deleteQuizzConfirmation(element) {
     let cMessage = confirm("Você deseja realmente remover esse quiz?");
     if (cMessage) {
-        let id = element.parentNode.parentNode.children[0].value;
+        let id = element.parentNode.parentNode.children[0].children[0].value;
         let userQuizzes = JSON.parse(localStorage.getItem("myQuizzes"));
         userQuizzes = userQuizzes.filter(userQuizz => userQuizz.id === Number(id));
         await deleteQuizz(userQuizzes[0]);
@@ -24,7 +24,7 @@ async function deleteQuizzConfirmation(element) {
 }
 
 function redirectEditQuizz(element) {
-    let id = element.parentNode.parentNode.children[0].value;
+    let id = element.parentNode.parentNode.children[0].children[0].value;
     localStorage.setItem("quizzId", id);
     window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + "/" + "edit.html";
 }
@@ -39,7 +39,7 @@ async function deleteQuizz(quizz) {
             }
         };
         let request = await fetch("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/" + quizz.id, options);
-        if (request.ok) {
+        if (!request.status.toString().startsWith("4")) {
             let userQuizzes = JSON.parse(localStorage.getItem("myQuizzes"));
             let userQuizz = userQuizzes.filter(userQuizz => userQuizz.id === quizz.id);
             let indexOf = Array.prototype.indexOf.call(userQuizzes, userQuizz[0]);
@@ -66,10 +66,12 @@ function fillUserQuizzes() {
     if (userQuizzes && userQuizzes.length > 0) {
         let quizzes = "";
         userQuizzes.forEach(userQuizz => {
-            quizzes += `<div class="quiz" onclick="enterQuizz(this)">
-                <input type="hidden" value="${userQuizz.id}">
-                <img src="${userQuizz.image}" alt="">
-                <h2>${userQuizz.title}</h2>
+            quizzes += `<div class="quiz">
+                <div onclick="enterQuizz(this)">
+                    <input type="hidden" value="${userQuizz.id}">
+                    <img src="${userQuizz.image}" alt="">
+                    <h2>${userQuizz.title}</h2>
+                </div>
                 <div class="quizz-actions-div">
                     <button>
                         <ion-icon name="create-outline"></ion-icon>

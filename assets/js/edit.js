@@ -458,7 +458,9 @@ function finishQuizz() {
     let quizzObj = [...JSON.parse(localStorage.getItem("myQuizzes"))].filter(myQuizz => myQuizz.id === quizz.id);
     document.getElementById("quizz").children[0].src = quizz.image;
     document.getElementById("quizz").children[1].innerHTML = quizz.title;
-    fetch("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes", {
+    let id = quizz.id;
+    delete quizz.id;
+    fetch("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/" + id, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
