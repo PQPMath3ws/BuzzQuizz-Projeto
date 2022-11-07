@@ -9,6 +9,248 @@ body {
     box-sizing: border-box;
 }
 
+/*
+
+main{
+    padding-top: 77px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    color: red;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 20px;
+    border: 1px dashed red;
+    border-radius: 20px;
+    width: 151px;
+    height: 30px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: #B9B9B9;
+    font-size: 20px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 21px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 17px;
+}
+
+h2 {
+    font-size: 39px;
+    font-weight: 400;
+    line-height: 45.7px;
+    color: #FFFFFF;
+}
+
+ion-icon {
+    color: red;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+#container{
+    max-width: 100%;   
+}
+
+#buzzquizz-header {
+    height: 69px;
+    width: 100%;
+    background-color: #EC362D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buzzquizz-text {
+    color: #FFFFFF;
+    font-size: 37px;
+    font-weight: 700;
+}
+
+.quizUsuario {
+    height: 181px;
+    border-radius: 5px;
+    border-spacing: 5px;
+}
+
+.quizUsuario:nth-child(2) > div {
+    display: flex;
+    align-items: center;
+}
+
+.sem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #dadada; 
+}
+
+.semQuiz {
+    margin-left: 10px;
+}
+
+.quizzesUsuario {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.quizzes {
+    margin-top: 90px;
+}
+
+.quizzes > div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.quiz {
+    position: relative;
+    min-width: 370px;
+    min-height: 181px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #FFFFFF00, #000000), url(../images/download.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;    
+}
+
+.quiz h2 {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    font-size: 19px;
+    color: #ffffff;
+}
+
+.quiz img {
+    z-index: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+#containerr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;  
+}
+
+.imgQuiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 227px;
+    background-image: url(../images/download.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pergunta, .resposta {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    word-break: break-all;
+    padding-top: 26px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.pergunta > div:nth-child(1), .resposta > div:nth-child(1) {
+    width: 72%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    background-color: #434CA0;
+    height: 138px;
+}
+
+.pergunta img {
+    min-width: 370px;
+    min-height: 181px;
+}
+
+.escolhas {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.escolha img {
+    width: 50%;
+}
+
+.resultado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.resultado img {
+    width: 340px
+}
+
+.texto {
+    width: 30%;
+    color: #484848;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.fimQuiz > div {
+    margin-top: 48px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 52px;
+    font-style: none;
+    border-radius: 15px;
+    background-color: #EC362D;
+    color: white;
+}
+
+.fimQuiz a {
+    color:#818181;
+    margin-left: 70px;
+}
+
+.escondido {
+    display: none;
+}
+*/
+
 #buzzquizz-header {
     height: 69px;
     width: 100%;
