@@ -14,7 +14,46 @@
         <p id="buzzquizz-text">BuzzQuizz</p>
     </header>
     <div id="container">
+        <div id="create-quizz">
+            <p class="titulo">Comece pelo começo</p>
+            <div class="items">
+                <input id="quizz-title" class="custom-input" type="text" placeholder="Título do seu quizz">
+                <p class="error-message">Digite um título válido para seu quizz</p>
+                <input id="quizz-url" class="custom-input" type="text" placeholder="URL da imagem do seu quizz">
+                <p class="error-message">O valor informado não é uma URL válida</p>
+                <input id="quizz-number-questions" class="custom-input" type="number" placeholder="Quantidade de perguntas do quizz">
+                <p class="error-message">O quizz deve ter no mínimo 3 perguntas</p>
+                <input id="quizz-number-levels" class="custom-input" type="number" placeholder="Quantidade de níveis do quizz">
+                <p class="error-message">O quizz deve ter no mínimo 2 níveis</p>
+            </div>
+            <button class="next-btn" onclick="setInitialValuesForQuizz()">
+                Prosseguir pra criar perguntas
+            </button>
+        </div>
+        <div id="create-questions">
+            <p class="titulo">Crie suas perguntas</p>
+            <div class="items">
+            </div>
+        </div>
+        <div id="create-levels">
+            <p class="titulo">Agora, decida os níveis</p>
+            <div class="items">
+            </div>
+        </div>
+        <div id="quizz-ready">
+            <p class="titulo">Seu quizz está pronto!</p>
+            <div id="quizz">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            <button class="next-btn" onclick="goQuizz()">
+                Acessar Quizz
+            </button>
+            <p id="p-index-link"><a href="/index.html">Voltar pra Início</a></p>
+        </div>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script type="text/javascript" src="assets/js/create.js" defer></script>
 </body>
 </html>
