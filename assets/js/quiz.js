@@ -115,7 +115,7 @@ function finishQuizz() {
     let containerLess = document.getElementById("container-less");
     let result = `<div id="response">
         <div id="result-header">
-            <h1>${qtd.toFixed(2)} % de acerto - ${quizz.levels[index].title}</h1>
+            <h1>${Math.round(qtd)} % de acerto - ${quizz.levels[index].title}</h1>
         </div>
         <div id="result-itens">
             <img src="${quizz.levels[index].image}" alt="">
