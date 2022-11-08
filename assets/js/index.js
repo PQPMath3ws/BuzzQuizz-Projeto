@@ -152,7 +152,7 @@ async function config() {
     document.getElementById("container-extra").innerHTML = "";
     addLoadingDiv();
     let quizzes = await getQuizzes();
-    document.body.children[6].remove();
+    document.getElementById("loading-content").remove();
     fillUserQuizzes();
     fillAllQuizzes(quizzes);
     await fillUserQuizzesActions();

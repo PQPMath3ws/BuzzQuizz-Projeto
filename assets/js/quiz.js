@@ -136,7 +136,7 @@ function restartQuizz() {
 async function config() {
     addLoadingDiv();
     quizz = await getQuizzById();
-    document.body.children[3].remove();
+    document.getElementById("loading-content").remove();
     addQuizzHeader();
     setQuizzToPage();
 }
