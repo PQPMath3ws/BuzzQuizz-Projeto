@@ -494,7 +494,7 @@ function goQuizz() {
 document.body.onload = async function() {
     addLoadingDiv();
     quizz = await getQuizzById();
-    document.body.children[4].remove();
+    document.getElementById("loading-content").remove();
     document.title = "Editar Quizz - " + quizz.title;
     createDivs();
 }
